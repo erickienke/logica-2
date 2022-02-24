@@ -1,0 +1,36 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var xaFora=0;
+    var yaFora=0;
+    var xcFora=0;
+    var ycFora=0;
+    var xaDentro=0;
+    var yaDentro=0;
+    var xcDentro=0;
+    var ycDentro=0;
+
+    function desenhaEsquadro(xaFora,yaFora,xcFora,ycFora,xaDentro,yaDentro,xcDentro,ycDentro){
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle="black";
+    pincel.beginPath();
+    pincel.moveTo(xaFora, yaFora);
+    pincel.lineTo(xaFora, ycFora);
+    pincel.lineTo(xcFora, ycFora);
+    pincel.fill();
+
+    pincel.fillStyle="white";
+    pincel.beginPath();
+    pincel.moveTo(xaDentro, yaDentro);
+    pincel.lineTo(xaDentro, ycDentro);
+    pincel.lineTo(xcDentro, ycDentro);
+    pincel.fill();
+    }
+
+    desenhaEsquadro(50,50,400,400,100,175,275,350);
+
+</script>
